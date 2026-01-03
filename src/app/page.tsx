@@ -47,54 +47,69 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-20 px-4 flex items-center justify-center bg-gradient-to-b from-black/50 via-transparent to-black/50">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8 animate-fade-in">
-            <h2 className="text-6xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Muhammad Zeeshan</span>
-            </h2>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-semibold">
-              Engineering Lead | Intelligent Systems Fanatic
-            </p>
-            <div className="flex items-center justify-center gap-2 text-lg text-gray-400 mb-6">
-              <MapPin size={20} />
-              Dubai, UAE
+      <section className="min-h-screen md:min-h-screen pt-16 md:pt-20 pb-16 md:pb-20 px-4 flex items-center justify-center bg-gradient-to-b from-black/50 via-transparent to-black/50">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 items-center">
+            {/* Image */}
+            <div className="md:col-span-2 flex justify-center md:justify-start animate-fade-in order-2 md:order-1">
+              <div className="relative w-40 md:w-full md:max-w-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl opacity-75 blur-2xl"></div>
+                <img 
+                  src="/profile.png" 
+                  alt="Muhammad Zeeshan" 
+                  className="relative w-full h-auto object-contain rounded-2xl border-2 border-blue-400/50 shadow-2xl shadow-blue-500/20"
+                />
+              </div>
             </div>
-            <p className="text-xl text-blue-300 font-semibold mb-6 italic">
-              "You dream of the future. I code it before you wake up."
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-              I am obsessively passionate about one thing: <span className="text-blue-300 font-semibold">Automation</span>. I don't build software that needs babysitting; I build digital brains that think for you. Imagine a business flow so smooth it feels like magic—where AI agents crunch the numbers overnight and hand you the strategy at sunrise.
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-              With 9+ years in the trenches, I lead engineering teams to do the impossible. We don't just patch holes; we reinvent the entire ship. If you are looking for a leader to hold the torch and guide your business out of the dark ages of manual processing...
-            </p>
-            <p className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-8">
-              You are in the right place. Let's build something crazy.
-            </p>
-          </div>
 
-          <div className="flex gap-4 justify-center flex-wrap mb-12">
-            <a
-              href="#projects"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center gap-2"
-            >
-              View My Work
-              <ArrowRight size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/devzeeshan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/20 px-8 py-3 rounded-lg hover:border-blue-400 hover:text-blue-400 transition-colors flex items-center gap-2"
-            >
-              LinkedIn
-              <Linkedin size={20} />
-            </a>
+            {/* Content */}
+            <div className="md:col-span-3 text-left animate-fade-in order-1 md:order-2">
+              <h2 className="text-3xl md:text-5xl font-bold mb-1 md:mb-2 leading-tight">
+                Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Muhammad Zeeshan</span>
+              </h2>
+              <p className="text-lg md:text-2xl text-gray-300 mb-1 md:mb-2 font-semibold">
+                Engineering Lead | Intelligent Systems Fanatic
+              </p>
+              <div className="flex items-center gap-2 text-sm md:text-base text-gray-400 mb-2 md:mb-4">
+                <MapPin size={16} />
+                Dubai, UAE
+              </div>
+              <p className="text-base md:text-lg text-blue-300 font-semibold mb-2 md:mb-4 italic">
+                "You dream of the future. I code it before you wake up."
+              </p>
+              <p className="text-sm md:text-base text-gray-400 mb-2 md:mb-4 leading-relaxed">
+                I am obsessively passionate about one thing: <span className="text-blue-300 font-semibold">Automation</span>. I build digital brains that think for you. AI agents that crunch numbers overnight and hand you strategy at sunrise.
+              </p>
+              <p className="text-sm md:text-base text-gray-400 mb-4 md:mb-6 leading-relaxed">
+                With 9+ years in the trenches, I lead engineering teams to do the impossible. If you need a leader to guide your business out of manual processing darkness...
+              </p>
+              <p className="text-lg md:text-xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-4 md:mb-6">
+                You are in the right place.
+              </p>
+
+              <div className="flex gap-3 flex-wrap justify-center md:justify-start">
+                <a
+                  href="#projects"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center gap-2 text-sm"
+                >
+                  View My Work
+                  <ArrowRight size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/devzeeshan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-white/20 px-6 py-2 rounded-lg hover:border-blue-400 hover:text-blue-400 transition-colors flex items-center gap-2 text-sm"
+                >
+                  LinkedIn
+                  <Linkedin size={18} />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Scroll indicator */}
-          <div className="animate-bounce text-gray-500">
+          <div className="animate-bounce text-gray-500 mt-12">
             <svg
               className="w-6 h-6 mx-auto"
               fill="none"
