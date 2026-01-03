@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, ExternalLink, ArrowRight, MapPin } from "lucide
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white relative z-10">
       {/* Navigation */}
       <nav className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -47,7 +47,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-20 px-4 flex items-center justify-center bg-gradient-to-b from-black via-blue-950/10 to-black">
+      <section className="min-h-screen pt-32 pb-20 px-4 flex items-center justify-center bg-gradient-to-b from-black/50 via-transparent to-black/50">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
             <h2 className="text-6xl md:text-7xl font-bold mb-6">
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-black">
+      <section id="about" className="py-20 px-4 bg-black/40">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 animate-fade-in">About Me</h3>
           <div className="grid md:grid-cols-2 gap-12">
@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* My Achievements Section */}
-      <section id="projects" className="py-20 px-4 bg-gradient-to-b from-black to-blue-950/10">
+      <section id="projects" className="py-20 px-4 bg-gradient-to-b from-black/40 to-black/20">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12">My Achievements</h3>
           
@@ -621,7 +621,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 bg-gradient-to-b from-black to-blue-950/10">
+      <section id="experience" className="py-20 px-4 bg-gradient-to-b from-black/20 to-black/40">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 animate-fade-in">Professional Experience</h3>
           <div className="space-y-0 relative">
@@ -763,7 +763,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-black">
+      <section id="skills" className="py-20 px-4 bg-black/40">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 animate-fade-in">Skills & Technologies</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -834,7 +834,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-blue-950/10">
+      <section className="py-20 px-4 bg-gradient-to-b from-black/40 to-black/60">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold mb-12 animate-fade-in">Education</h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -853,7 +853,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-black">
+      <section id="contact" className="py-20 px-4 bg-black/40">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-4xl font-bold mb-6 animate-fade-in">Let's Work Together</h3>
           <p className="text-gray-400 text-lg mb-8">
@@ -881,7 +881,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-white/10 py-8 px-4">
+      <footer className="bg-black/60 border-t border-white/10 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center text-gray-500">
           <p>© 2026 Muhammad Zeeshan. All rights reserved.</p>
         </div>

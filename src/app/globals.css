@@ -13,12 +13,151 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #000000 0%, #0f0f1e 25%, #1a0f2e 50%, #0f0f1e 75%, #000000 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-shift 20s ease-in-out infinite;
+}
+
+/* AI/ML Tech Grid Background */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
 }
 
 @layer utilities {
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes grid-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+
+  @keyframes glow-shift {
+    0%, 100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.2);
+    }
+  }
+
+  @keyframes particle-float-1 {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    90% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(100px, -100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes particle-float-2 {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(-80px, 80px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes particle-float-3 {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.4;
+    }
+    90% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translate(120px, 60px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes circuit-pulse {
+    0%, 100% {
+      stroke-dashoffset: 1000;
+      opacity: 0.2;
+    }
+    50% {
+      stroke-dashoffset: 0;
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes data-stream {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -103,6 +242,56 @@ body {
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  /* AI/ML Tech Animations */
+  .animate-particle-1 {
+    animation: particle-float-1 8s ease-in infinite;
+  }
+
+  .animate-particle-2 {
+    animation: particle-float-2 10s ease-in infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-particle-3 {
+    animation: particle-float-3 12s ease-in infinite;
+    animation-delay: 4s;
+  }
+
+  .animate-circuit-pulse {
+    animation: circuit-pulse 4s ease-in-out infinite;
+  }
+
+  .animate-data-stream {
+    animation: data-stream 15s linear infinite;
+  }
+
+  .tech-particle {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tech-particle-accent {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: rgba(168, 85, 247, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tech-line {
+    position: fixed;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    pointer-events: none;
+    z-index: 1;
   }
 }
 
